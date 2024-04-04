@@ -15,6 +15,19 @@
   >
     <h1 style="text-align: center; margin-top: 20px">Option Price:</h1>
 
+    <!-- Display Option Price -->
     <p style="font-size: 20px; text-align: center">{{ option_price }}</p>
+
+    <!-- Calculate and Display Intrinsic Value -->
+    {% set intrinsic_value = S - K if option_type == 'call' else K - S %}
+    <p style="font-size: 16px; text-align: center">
+      Intrinsic Value: {{ intrinsic_value }}
+    </p>
+
+    <!-- Calculate and Display Time Value -->
+    {% set time_value = option_price - intrinsic_value %}
+    <p style="font-size: 16px; text-align: center">
+      Time Value: {{ time_value }}
+    </p>
   </body>
 </html>
