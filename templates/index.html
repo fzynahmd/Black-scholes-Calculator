@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black-Scholes Option Price Calculator</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    "
+  >
+    <h1 style="text-align: center; margin-top: 20px">
+      Black-Scholes Option Price Calculator
+    </h1>
+
+    <form
+      action="/calculate"
+      method="post"
+      style="
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <label for="S">Stock Price (S):</label><br />
+      <input
+        type="text"
+        id="S"
+        name="S"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        "
+      /><br />
+      <label for="K">Strike Price (K):</label><br />
+      <input
+        type="text"
+        id="K"
+        name="K"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        "
+      /><br />
+      <label for="T">Time to Expiry (T)(in years):</label><br />
+      <input
+        type="text"
+        id="T"
+        name="T"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        "
+      /><br />
+      <label for="r">Risk-free Rate (r)(10% is written as 0.1):</label><br />
+      <input
+        type="text"
+        id="r"
+        name="r"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        "
+      /><br />
+      <label for="sigma">Volatility (sigma):</label><br />
+      <input
+        type="text"
+        id="sigma"
+        name="sigma"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        "
+      /><br />
+      <label for="option_type">Option Type:</label><br />
+      <select
+        id="option_type"
+        name="option_type"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        "
+      >
+        <option value="call">Call</option>
+        <option value="put">Put</option></select
+      ><br /><br />
+      <input
+        type="submit"
+        value="Calculate"
+        style="
+          width: 100%;
+          padding: 10px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+      />
+    </form>
+  </body>
+</html>
